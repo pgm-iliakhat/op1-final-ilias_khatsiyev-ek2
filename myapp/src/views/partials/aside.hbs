@@ -1,0 +1,13 @@
+<div class="left">
+  <p class="left__text">Categories</p>
+  <ul>
+    
+    {{#each categories}}
+      
+      <span class="left__span"><li><a
+            href="/categories/{{this.id}}"
+          >{{category}}</a></li></span>
+    {{/each}}
+
+  </ul>
+</div>

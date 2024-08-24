@@ -1,0 +1,22 @@
+<main>
+    {{> header this}}
+    <section class="content">
+        {{#if flash.message}}
+            <div class="alert {{flash.type}}">
+                {{flash.message}}
+            </div>
+        {{/if}}
+        <form action="/register" method="POST">
+            <label>Lastname</label>
+            <input type="text" name="lastname" required>
+            <label>Firstname</label>
+            <input type="text" name="firstname" required>
+            <label>Email</label>
+            <input type="email" name="email" required>
+            <label>Password</label>
+            <input type="password" name="password" required>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </section>
+</main>
